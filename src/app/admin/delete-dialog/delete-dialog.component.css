@@ -1,0 +1,32 @@
+.deleteDialog {
+  min-width: 70%;
+}
+
+.dialogTitle {
+  text-align: center;
+  color: crimson;
+  font-size: 18px;
+}
+
+.delete {
+  font-family: "Arial Rounded MT Bold";
+  color: red;
+  font-size: 20px;
+}
+
+.yesBtn {
+  float: left;
+  border: 0;
+  border-radius: 5px;
+  color: steelblue;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.closeBtn {
+  float: right;
+  border-radius: 5px;
+  color: red;
+  border: 1px solid red;
+  margin-top: 10px;
+}

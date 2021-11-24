@@ -1,0 +1,29 @@
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px 0px 50px;
+}
+
+.app-title {
+  font-family: "Footlight MT Light";
+  font-size: 25px;
+}
+
+.cart-btn mat-icon {
+  color: red;
+  margin-right: 5px;
+}
+
+.cart-btn, .logout-btn {
+  color: darkslategrey;
+  font-size: 17px;
+}
+
+.cart-btn:hover, .logout-btn:hover {
+  color: midnightblue;
+  font-size: 17px;
+}

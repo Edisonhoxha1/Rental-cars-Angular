@@ -1,0 +1,24 @@
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="push" [(opened)]="opened" position="end">
+     <app-shopping-cart></app-shopping-cart>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div>
+        <span class="app-title">Rent a Car Application</span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-row">
+        <button class="logout-btn" mat-button (click)="logOut()">LogOut</button>
+        <button class="cart-btn" mat-button (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon>Cart</button>
+      </div>
+    </mat-toolbar>
+    <app-list></app-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

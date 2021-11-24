@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <div>
+    <span class="app-title">Rent a Car Application</span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button class="add-cars-btn" mat-button [routerLink]="['/admin/add-cars']">Add Cars</button>
+  </div>
+  <div class="example-button-row">
+    <button class="logout-btn" mat-button (click)="logOut()">LogOut</button>
+  </div>
+</mat-toolbar>
+<app-list></app-list>
