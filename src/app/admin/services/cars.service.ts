@@ -15,4 +15,8 @@ export class CarsService {
   editCars(id: string) {
     return JSON.parse(<string>localStorage.getItem('carsList'));
   }
+
+  reservedCars(){
+    return JSON.parse(<string>localStorage.getItem('reservedCarsList'));
+  }
 }

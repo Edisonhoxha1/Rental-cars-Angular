@@ -21,6 +21,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { EditCarsComponent } from './edit-cars/edit-cars.component';
 import { EditCarsModalComponent } from './edit-cars-modal/edit-cars-modal.component';
+import { ReservedCarsComponent } from './reserved-cars/reserved-cars.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { EditCarsModalComponent } from './edit-cars-modal/edit-cars-modal.compon
         ListComponent,
         DeleteDialogComponent,
         EditCarsComponent,
-        EditCarsModalComponent
+        EditCarsModalComponent,
+        ReservedCarsComponent
     ],
     exports: [
         ListComponent

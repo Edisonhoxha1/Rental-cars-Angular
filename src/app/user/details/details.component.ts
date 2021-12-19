@@ -30,6 +30,9 @@ export class DetailsComponent implements OnInit {
   }
 
   addToCart(){
+    console.log(this.carsService.addCarInCart());
+    this.carsService.addToCartSubject(this.carDetails);
+    this.dialogRef.close();
   }
 
 }

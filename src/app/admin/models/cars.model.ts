@@ -3,4 +3,9 @@ export interface CarsModel {
   carName: string;
   year: Date | string;
   fuel: string;
+
+}
+
+export interface ReservedCasModel extends CarsModel {
+  reservedDate: string;
 }

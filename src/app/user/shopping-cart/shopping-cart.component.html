@@ -1,2 +1,9 @@
-<p>Sidenav opened</p>
-<p *ngFor="let i of carReserved">{{i.year}}</p>
+<div *ngIf="cartItems.length === 0" class="alert alert-info">Your cart is empty</div>
+<div class="cart-list">
+  <table>
+    <tr *ngFor="let cart of cartItems">
+      <td>{{cart.carName}}</td>
+    </tr>
+  </table>
+  <button class="reserve-btn">Finish your order</button>
+</div>

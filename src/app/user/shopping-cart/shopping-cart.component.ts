@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatSidenavModule } from "@angular/material/sidenav";
+import {Component, Inject, OnInit} from '@angular/core';
 import {CarsService} from "../services/cars.service";
+import {CarsModel} from "../models/cars.model";
 
 @Component({
   selector: 'app-shopping-cart',
@@ -9,19 +9,22 @@ import {CarsService} from "../services/cars.service";
 })
 export class ShoppingCartComponent implements OnInit {
 
-  isExpaded: boolean = false;
-
-  carReserved: any;
+  cartItems: CarsModel[] = [];
 
   constructor(public carsService: CarsService) { }
 
   ngOnInit(): void {
-    // // this.carReserved = this.carsService.getCarInCart();
-    // // console.log(this.carReserved.year);
-    // // console.log(this.carsService.getCarInCart());
-    // // console.log("ddddd");
-    // this.carReserved = this.carsService.test;
-    // console.log((this.carsService.test));
+    const shoppingLocalStorage = localStorage.getItem('shoppingCart');
+    if (shoppingLocalStorage) {
+      this.cartItems = JSON.parse(shoppingLocalStorage);
+    }
+    this.carsService.getCartValue().subscribe((carData : CarsModel) => {
+      console.log(carData);
+      if (carData) {
+        this.cartItems.push(carData);
+        localStorage.setItem('shoppingCart', JSON.stringify(this.cartItems));
+      }
+    })
   }
 
 }

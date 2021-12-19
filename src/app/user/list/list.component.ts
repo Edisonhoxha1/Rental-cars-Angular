@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {CarsModel} from "../../admin/models/cars.model";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
@@ -7,6 +6,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {Router} from "@angular/router";
 import {CarsService} from "../services/cars.service";
 import {DetailsComponent} from "../details/details.component";
+import {CarsModel} from "../models/cars.model";
 
 @Component({
   selector: 'app-list',
@@ -24,11 +24,13 @@ export class ListComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort | null;
 
 
-  constructor(public carsService: CarsService, public dialog: MatDialog, public router: Router) {
-  }
+  constructor(public carsService: CarsService, public dialog: MatDialog, public router: Router) {}
+
+  test= [];
 
   ngOnInit(): void {
     this.getCarsList();
+    // console.log(localStorage.getItem('loginForm'));
   }
 
   // ngAfterViewInit() {

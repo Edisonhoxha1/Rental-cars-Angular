@@ -1,0 +1,12 @@
+.cart-list {
+  margin: 30px;
+}
+
+.reserve-btn {
+  padding: 10px;
+  border: 0px;
+  font-family: cursive;
+  color: white;
+  background-color: cadetblue;
+  margin-top: 10px;
+}
