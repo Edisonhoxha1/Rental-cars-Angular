@@ -15,12 +15,14 @@ export class AppComponent implements OnInit {
         "carName": "Mercedes Benzzzzzzzzzz",
         "year": "2013",
         "fuel": "Deisel",
+        "price": "50 Euro",
         "reservedDate": "20-11-2021"
       }, {
         "id": "2f08f68e-4b09-8ebe-b7e4-df5df22ec7aa",
         "carName": "Fiat",
         "year": "2000",
         "fuel": "Deisel",
+        "price": "35 Euro",
         "reservedDate": "22-11-2021"
 
       }, {
@@ -28,6 +30,7 @@ export class AppComponent implements OnInit {
         "carName": "Audi",
         "year": "2019",
         "fuel": "Deisel",
+        "price": "45 Euro",
         "reservedDate": "23-11-2021"
 
       }, {
@@ -35,6 +38,7 @@ export class AppComponent implements OnInit {
         "carName": "Passat",
         "year": "2005",
         "fuel": "Deisel",
+        "price": "25 Euro",
         "reservedDate": "24-11-2021"
 
       }, {
@@ -42,12 +46,14 @@ export class AppComponent implements OnInit {
         "carName": "Citroen C3",
         "year": "2011",
         "fuel": "Deisel",
+        "price": "20 Euro",
         "reservedDate": "18-12-2021"
       }, {
         "id": "e4f7ff3f-88bd-ea72-51e7-4cff623fe745",
         "carName": "Audi",
         "year": "2012",
         "fuel": "Gaz",
+        "price": "55 Euro",
         "reservedDate": "17-12-2021"
       }];
     localStorage.setItem('reservedCarsList', JSON.stringify(list));

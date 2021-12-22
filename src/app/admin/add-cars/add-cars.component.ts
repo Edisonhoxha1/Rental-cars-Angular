@@ -13,7 +13,6 @@ export class AddCarsComponent implements OnInit {
 
   addCars!: FormGroup;
   cars: any = [];
-  // cars: any = {};
 
   constructor(public formBuilder: FormBuilder, public router: Router, public snackbar: MatSnackBar) { }
 
@@ -22,7 +21,8 @@ export class AddCarsComponent implements OnInit {
       id : new FormControl(UUID.UUID(), Validators.required),
       carName : new FormControl('', Validators.required),
       year: new FormControl('', Validators.required),
-      fuel: new FormControl('', Validators.required)
+      fuel: new FormControl('', Validators.required),
+      price: new FormControl('', Validators.required)
     })
   }
 

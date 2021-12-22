@@ -30,7 +30,8 @@ export class EditCarsComponent implements OnInit {
           this.editCars = this.formBuilder.group({
             carName: new FormControl(this.carUpdate[i].carName),
             year: new FormControl(this.carUpdate[i].year),
-            fuel: new FormControl(this.carUpdate[i].fuel)
+            fuel: new FormControl(this.carUpdate[i].fuel),
+            price: new FormControl(this.carUpdate[i].price)
           })
           console.log(this.carUpdate[i].year);
         }

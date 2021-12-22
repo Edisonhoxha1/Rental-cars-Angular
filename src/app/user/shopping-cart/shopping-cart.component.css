@@ -8,5 +8,22 @@
   font-family: cursive;
   color: white;
   background-color: cadetblue;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.carSelected {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.carPrice {
+  font-family: cursive;
+  font-size: 17px;
+  color: blueviolet;
+  margin-left: 60px;
+}
+
+mat-sidenav.mat-drawer.mat-sidenav.ng-tns-c203-0.ng-trigger.ng-trigger-transform.mat-drawer-end.mat-drawer-push.ng-star-inserted.mat-drawer-opened {
+  height: fit-content;
 }

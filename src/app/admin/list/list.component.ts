@@ -18,7 +18,7 @@ export class ListComponent implements OnInit, AfterViewInit {
 
   list: CarsModel[] = [];
 
-  displayedColumns: string[] = ['id', 'carName', 'year', 'fuel', 'edit', 'remove'];
+  displayedColumns: string[] = ['id', 'carName', 'year', 'fuel', 'price', 'edit', 'remove'];
   dataSource: MatTableDataSource<CarsModel> = new MatTableDataSource();
 
   @ViewChild(MatPaginator) paginator: MatPaginator | null;

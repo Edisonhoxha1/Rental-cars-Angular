@@ -27,7 +27,8 @@ export class EditCarsModalComponent implements OnInit {
       id: new FormControl(this.dialogData.currentElement.id),
       carName: new FormControl(this.dialogData.currentElement.carName),
       year: new FormControl(this.dialogData.currentElement.year),
-      fuel: new FormControl(this.dialogData.currentElement.fuel)
+      fuel: new FormControl(this.dialogData.currentElement.fuel),
+      price: new FormControl(this.dialogData.currentElement.price)
     })
   }
 

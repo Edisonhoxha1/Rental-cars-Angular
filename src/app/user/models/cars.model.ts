@@ -3,4 +3,5 @@ export interface CarsModel {
   carName?: string;
   year?: Date | string;
   fuel?: string;
+  price?: string;
 }

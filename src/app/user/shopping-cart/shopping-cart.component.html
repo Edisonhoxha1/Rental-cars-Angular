@@ -2,8 +2,9 @@
 <div class="cart-list">
   <table>
     <tr *ngFor="let cart of cartItems">
-      <td>{{cart.carName}}</td>
+      <td class="carSelected">{{cart.carName}} <div class="carPrice">{{cart.price}}</div></td>
     </tr>
   </table>
-  <button class="reserve-btn">Finish your order</button>
+  <button class="reserve-btn btn-block" *ngIf="cartItems.length !== 0">Finish your order</button>
+  <button class="btn btn-secondary btn-block" (click)="emptyCart()">Empty your cart</button>
 </div>

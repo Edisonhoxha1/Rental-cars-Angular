@@ -3,7 +3,7 @@ export interface CarsModel {
   carName: string;
   year: Date | string;
   fuel: string;
-
+  price: number;
 }
 
 export interface ReservedCasModel extends CarsModel {
