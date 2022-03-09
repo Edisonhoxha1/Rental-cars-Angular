@@ -10,7 +10,8 @@ import {CarsModel} from "../models/cars.model";
 export class ShoppingCartComponent implements OnInit {
 
   cartItems: CarsModel[] = [];
-  cartTotal?: string;
+  cartTotal: number | any = 0;
+  test: string | any = [];
 
   constructor(public carsService: CarsService) { }
 
@@ -21,16 +22,16 @@ export class ShoppingCartComponent implements OnInit {
     }
     this.carsService.getCartValue().subscribe((carData : CarsModel) => {
       console.log(carData);
+
       if (carData) {
         this.cartItems.push(carData);
         localStorage.setItem('shoppingCart', JSON.stringify(this.cartItems));
       }
     })
 
-    // this.cartTotal = 0;
-    this.cartItems.forEach(item => {
-      // this.cartTotal += item.carName;
-    })
+    this.test.push(localStorage.getItem('shoppingCart'));
+    console.log(this.test);
+
   }
 
   emptyCart(){

@@ -1,3 +1,9 @@
+.allCars {
+  color: white;
+  font-size: 22px;
+  font-family: cursive;
+}
+
 table {
   width: 100%;
 }

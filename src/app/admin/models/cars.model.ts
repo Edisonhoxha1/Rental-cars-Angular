@@ -6,6 +6,6 @@ export interface CarsModel {
   price: number;
 }
 
-export interface ReservedCasModel extends CarsModel {
+export interface ReservedCarsModel extends CarsModel {
   reservedDate: string;
 }

@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {ReservedCasModel} from "../models/cars.model";
+import {ReservedCarsModel} from "../models/cars.model";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
@@ -13,10 +13,12 @@ import {Router} from "@angular/router";
 })
 export class ReservedCarsComponent implements OnInit, AfterViewInit {
 
-  reservedList: ReservedCasModel[] = [];
+  reservedList: ReservedCarsModel[] = [];
+
+  test: any[] = [];
 
   displayedColumns: string[] = ['id', 'carName', 'year', 'fuel', 'price', 'reservedDate'];
-  dataSource: MatTableDataSource<ReservedCasModel> = new MatTableDataSource();
+  dataSource: MatTableDataSource<ReservedCarsModel> = new MatTableDataSource();
 
   @ViewChild(MatPaginator) paginator: MatPaginator | null;
   @ViewChild(MatSort) sort: MatSort | null;
@@ -40,9 +42,9 @@ export class ReservedCarsComponent implements OnInit, AfterViewInit {
 
     console.log(this.carsService.reservedCars());
     this.reservedList = this.carsService.reservedCars().filter(
-      (element: ReservedCasModel) => new Date(element.reservedDate) >= new Date(start) && new Date(element.reservedDate) <= new Date(endDate)
+      (element: ReservedCarsModel) => new Date(element.reservedDate) >= new Date(start) && new Date(element.reservedDate) <= new Date(endDate)
     );
-    // this.reservedList = this.carsService.reservedCars();
+    // this.test = this.carsService.reservedCars();
     console.log(this.reservedList);
     this.dataSource = new MatTableDataSource(this.reservedList);
   }
